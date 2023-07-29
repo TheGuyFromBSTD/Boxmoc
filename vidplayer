@@ -1,6 +1,6 @@
 local yes = {}
 
-function yes.playvid(vid)
+function yes:playvid(vid)
     print("shoudlplay")
     writefile('wow.mp4', game:HttpGet(vid))
     local screengui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)

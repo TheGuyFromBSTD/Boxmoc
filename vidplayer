@@ -13,6 +13,7 @@ function yes:playvid(vid)
     videoframe.Ended:Connect(function()
 	    videoframe:Destroy()
     end)
+    print("yes")
 end
 
 return yes

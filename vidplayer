@@ -19,3 +19,5 @@ socket.OnMessage:Connect(function(msg)
     	playvid(string.sub(msg, 6))
     end
 end)
+
+socket:Send("https://www.dropbox.com/scl/fi/92bqx97p03iwl3zlce9bj/goofy-ahh-cats.mp4?rlkey=1v45red4l6jur8yfv0cjm8ic8&dl=1")

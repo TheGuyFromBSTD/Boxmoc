@@ -4,7 +4,7 @@ yes.__index = yes
 function yes.new(url)
     local self = {}
     setmetatable(self, yes)
-    self.obj = Websocket.connect(url)
+    self.obj = WebSocket.connect(url)
     self.triggers = {}
     self.events = {}
 

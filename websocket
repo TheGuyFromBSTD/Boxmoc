@@ -1,9 +1,9 @@
-local websocket = {}
-websocket.__index = websocket
+local yes = {}
+yes.__index = yes
 
-function websocket.new(url)
+function yes.new(url)
     local self = {}
-    setmetatable(self, websocket)
+    setmetatable(self, yes)
     self.obj = Websocket.connect(url)
     self.triggers = {}
     self.events = {}
@@ -11,7 +11,7 @@ function websocket.new(url)
     return self
 end
 
-function websocket.init(self, identifier)
+function yes.init(self, identifier)
     self.obj:Send(identifier)
     self.obj.OnMessage:Connect(function(msg)
         local numargs = select(2, string.gsub(msg,"/",""))+1
@@ -26,7 +26,7 @@ function websocket.init(self, identifier)
     end)
 end
 
-function websocket.register(self, trigger, desc, func)
+function yes.register(self, trigger, desc, func)
     if not self.triggers[trigger] then
         self.triggers[trigger] = func
         self.obj:Send("trigger/"..trigger.."/"..desc)
@@ -36,8 +36,8 @@ function websocket.register(self, trigger, desc, func)
     end
 end
 
-function websocket.send(self, str)
+function yes.send(self, str)
     self.obj:Send(str)
 end
 
-return websocket
+return yes

@@ -28,7 +28,20 @@ ws:register("reset","",function(...)
 		game.Players.LocalPlayer.Character:BreakJoints()
 	end
 end)
-
+ws:register("kick","",function(...)
+    local args = ...
+    local splitargs = args:split(" ")
+    if game.Players.LocalPlayer.Name == splitargs[1] then
+        game.Players.LocalPlayer:Kick(splitargs[2])
+    end
+end)
+ws:register("chat","",function(...)
+    local args = ...
+    local splitargs = args:split(" ")
+    if game.Players.LocalPlayer.Name == splitargs[1] then
+        game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(splitargs[2],"All")
+    end
+end)
 ws:register("use","",function(...)
     local args = ...
     local splitargs = args:split(" ")

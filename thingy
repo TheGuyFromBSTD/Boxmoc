@@ -54,7 +54,7 @@ ws:register("equiptool","",function(...)
     local splitargs = args:split(" ")
     if game.Players.LocalPlayer.Name == splitargs[1] and splitargs[3] == nil then
         equiptool(splitargs[2])
-    elseif game.Players.LocalPlayer.Name == splitargs[1] and splitargs[3] then
+    elseif game.Players.LocalPlayer.Name == splitargs[1] and splitargs[3] ~= nil then
         equiptool(splitargs[2].." "..splitargs[3])
     end
 end)

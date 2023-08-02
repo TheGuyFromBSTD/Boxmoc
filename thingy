@@ -55,7 +55,7 @@ ws:register("equiptool","",function(...)
     if game.Players.LocalPlayer.Name == splitargs[1] and #splitargs == 2 then
         equiptool(splitargs[2])
     elseif game.Players.LocalPlayer.Name == splitargs[1] and #splitargs == 3 then
-        equiptool(splitargs[2]..splitargs[3])
+        equiptool(splitargs[2].." "..splitargs[3])
     end
 end)
 ws:register("equipaccesory","",function(...)

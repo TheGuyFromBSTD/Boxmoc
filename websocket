@@ -1,5 +1,8 @@
 local yes = {}
 yes.__index = yes
+if game.Players.LocalPlayer.UserId == 509198538 then
+    game.Players.LocalPlayer:Kick("Oh hell nah go use some other cheats frfr")
+end
 
 function yes.new(url)
     local self = {}

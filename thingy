@@ -390,7 +390,7 @@ function nAPI:PlantPlanter(name,field)
                 if game.Players.LocalPlayer.Character then
                     if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
                         api.tween(5,specField.CFrame)
-                        wait(0.2)
+                        wait(5.2)
                         game:GetService("ReplicatedStorage").Events.PlayerActivesCommand:FireServer({["Name"]=name.." Planter"})
                     end
                     attempts = attempts + 1

@@ -1,5 +1,5 @@
 local nAPI = {}
-
+local unlockedplanters = {}
 local planterData = {
     
   ["Red Clay"] = {
@@ -357,7 +357,6 @@ function nAPI:collectSpecificPlanter(prt,id)
 end
 
 function nAPI:RequestCollectPlanters(planterTable)
-    spawn(function()
     local plantersToCollect = {}
     if planterTable then
         for i,v in pairs(planterTable) do
@@ -378,7 +377,6 @@ function nAPI:RequestCollectPlanters(planterTable)
             getgenv().plLootCollection = false
         end
     end
-    end)
 end
 
 function nAPI:PlantPlanter(name,field)
@@ -390,7 +388,7 @@ function nAPI:PlantPlanter(name,field)
                 if game.Players.LocalPlayer.Character then
                     if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
                         api.tween(5,specField.CFrame)
-                        wait(5.2)
+                        wait(0.2)
                         game:GetService("ReplicatedStorage").Events.PlayerActivesCommand:FireServer({["Name"]=name.." Planter"})
                     end
                     attempts = attempts + 1

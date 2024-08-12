@@ -1,18 +1,18 @@
-local yes = {}
-yes.__index = yes
+local websocket = {}
+websocket.__index = websocket
 
-function yes.new(url)
+function websocket.new(url)
     local self = {}
-    setmetatable(self, yes)
-    self.obj = WebSocket.connect(url)
+    setmetatable(self, websocket)
+    self.obj = websocket.connect(url)
     self.triggers = {}
     self.events = {}
 
     return self
 end
 
-function yes.init(self, identifier)
-    self.obj:Send(tostring(identifier))
+function websocket.init(self, identifier)
+    self.obj:Send(identifier)
     self.obj.OnMessage:Connect(function(msg)
         local numargs = select(2, string.gsub(msg,"/",""))+1
         local args = {}
@@ -26,17 +26,18 @@ function yes.init(self, identifier)
     end)
 end
 
-function yes.register(self, trigger, desc, func)
+function websocket.register(self, trigger, desc, func)
     if not self.triggers[trigger] then
         self.triggers[trigger] = func
         self.obj:Send("trigger/"..trigger.."/"..desc)
+        print("Created trigger "..trigger.." with "..tostring(func))
     else
         warn("Trigger \""..trigger.."\" is already registered with "..tostring(func)..". Please choose a different trigger.")
     end
 end
 
-function yes.send(self, str)
+function websocket.send(self, str)
     self.obj:Send(str)
 end
 
-return yes
+return websocket

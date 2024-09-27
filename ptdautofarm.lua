@@ -95,8 +95,7 @@ local function upgradeloop(tower)
     upgradeloop(tower)
 end
 
-local function place(tower)
-    print(tower)
+local function place(tower) 
     local args = {
         [1] = tower,
         [2] = CFrame.new(-14666.0352, 605.687012, -2270.27271, 1, 0, 0, 0, 1, 0, 0, 0, 1)
@@ -144,7 +143,7 @@ task.spawn(function()
 end)
 game.workspace.Game.Map.PlacedUnits.ChildAdded:Connect(function(child)
     currentplacing = {["Tower"] = child, ["Level"] = 1}
-    coroutine.wrap(upgradeloop)(child)
+    coroutine.wrap(upgradeloop)(child.Name)
 end)
 game:GetService("ReplicatedStorage").Packages.Knit.Services.WaveService.RF.AutoSkip:InvokeServer()
 game:GetService("ReplicatedStorage").Packages.Knit.Services.WaveService.RF.SpeedUp:InvokeServer()

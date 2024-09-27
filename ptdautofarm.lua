@@ -102,7 +102,7 @@ if game.PlaceId == 15939808257 then
     end
     task.wait(1)
     plr.Character:PivotTo(CFrame.new(-34.9111, 508.059, 193.926))
-    task.wait(0.5)
+    task.wait(0.7)
     game:GetService("ReplicatedStorage").Packages.Knit.Services.ElevatorService.RF.Start:InvokeServer("Underworld-1")
 end
 task.spawn(function()

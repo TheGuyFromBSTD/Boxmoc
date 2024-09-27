@@ -22,7 +22,7 @@ local maxlevels = {
     ["Odin"] = 5;
     ["Rosy Apollo"] = 7;
     ["Apollo"] = 7;
-}]]
+}
 local levelcosts = {
     ["Fire Guardian"] = {
         [1] = 475;
@@ -57,7 +57,7 @@ local levelcosts = {
         [6] = 2450;
         [7] = 2850;
     },
-}
+}]]
 local currentmaxes = {}
 for i,v in pairs(hotbarui:GetDescendants()) do
     if v:IsA("Model") then

@@ -88,7 +88,7 @@ end
 local function place(tower)
     local args = {
         [1] = tower,
-        [2] = CFrame.new(-14659.3477, 605.209778, -2274.07202, 1, 0, 0, 0, 1, 0, 0, 0, 1) * CFrame.Angles(-0, 0, -0)
+        [2] = CFrame.new(-14666.0352, 605.687012, -2270.27271, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     }
     game:GetService("ReplicatedStorage").Packages.Knit.Services.UnitService.RF.PlaceUnit:InvokeServer(unpack(args))
     currentmaxes[tower] += 1

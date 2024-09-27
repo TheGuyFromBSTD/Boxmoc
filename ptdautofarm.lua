@@ -1,4 +1,5 @@
 wait(6)
+print('amongus")
 local plr = game.Players.LocalPlayer
 plr.OnTeleport:Connect(function(State)
 	if queue_on_teleport then
@@ -88,7 +89,7 @@ end
 local function place(tower)
     local args = {
         [1] = tower,
-        [2] = CFrame.new(placespot + Vector3.new(0,1.8,0)) * CFrame.Angles(-0, 0, -0)
+        [2] = CFrame.new(-14659.3477, 608.209778, -2274.07202, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     }
     game:GetService("ReplicatedStorage").Packages.Knit.Services.UnitService.RF.PlaceUnit:InvokeServer(unpack(args))
     currentmaxes[tower] += 1

@@ -71,7 +71,6 @@ for i,v in pairs(hotbarui:GetDescendants()) do
             local slot = v.Parent.Parent.Parent.Name
             local pricestring = v.Parent.Parent.Label.Text
             local enchant = v.Parent.Parent.Enchant.Enchant.Icon.Image
-            print(enchant)
             local price = string.gsub(pricestring, "%D", "")
             if enchant ~= "" then
                 loadout[slot] = {["Tower"] = v.Name.."/"..enchantnames[enchant], ["Price"] = tonumber(price)}

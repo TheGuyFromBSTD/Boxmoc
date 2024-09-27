@@ -7,7 +7,7 @@ plr.OnTeleport:Connect(function(State)
 end)
 local hotbarui = plr.PlayerGui.MainUI.Hotbar.Main.Units
 local loadout = {}
-local placespot = CFrame.new(Vector3.new(-14658, 605, -2280) + Vector3.new(0,1.8,0)) * CFrame.Angles(-0, 0, -0)
+local placespot = CFrame.new(Vector3.new(-14658, 605, -2280))
 local nextplace = 1
 local currentplacing = {["Tower"] = nil,["Level"] = 1}
 local maxes = {

@@ -7,7 +7,7 @@ plr.OnTeleport:Connect(function(State)
 end)
 local hotbarui = plr.PlayerGui.MainUI.Hotbar.Main.Units
 local loadout = {}
-local placespot = CFrame.new(-14663.25390625, 605.6867065429688, -2268.96533203125)
+local placespot = Vector3.new(-14663.25390625, 605.6867065429688, -2268.96533203125)
 local nextplace = 1
 local currentplacing = {["Tower"] = nil,["Level"] = 1}
 local maxes = {
@@ -88,7 +88,7 @@ end
 local function place(tower)
     local args = {
         [1] = tower,
-        [2] = placespot
+        [2] = CFrame.new(placespot + Vector3.new(0,1.8,0)) * CFrame.Angles(-0, 0, -0)
     }
     game:GetService("ReplicatedStorage").Packages.Knit.Services.UnitService.RF.PlaceUnit:InvokeServer(unpack(args))
     currentmaxes[tower] += 1

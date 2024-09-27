@@ -9,7 +9,7 @@ local hotbarui = plr.PlayerGui.MainUI.Hotbar.Main.Units
 local loadout = {}
 local nextplace = 1
 local currentplacing = {["Tower"] = nil,["Level"] = 1}
---[[local maxes = {
+local maxes = {
     ["Fire Guardian"] = 2;
     ["Enderguy"] = 2;
     ["Odin"] = 3;
@@ -57,15 +57,23 @@ local levelcosts = {
         [6] = 2450;
         [7] = 2850;
     },
-}]]
+}
+local enchantnames = {}
+for i,v in pairs(plr.PlayerGui.MainUI.Frames.Enchant.Chances.ScrollingFrame:GetChildren()) do
+    if v:IsA("Frame") then
+        enchantnames[v.Name] = v.Icon.Image
+    end
+end
+
 local currentmaxes = {}
 for i,v in pairs(hotbarui:GetDescendants()) do
     if v:IsA("Model") then
         if v.Parent.Parent:FindFirstChild("Label") then
             local slot = v.Parent.Parent.Parent.Name
             local pricestring = v.Parent.Parent.Label.Text
+            local enchant = v.Parent.Parent.Enchant.Enchant.Icon.Image
             local price = string.gsub(pricestring, "%D", "")
-            loadout[slot] = {["Tower"] = v.Name, ["Price"] = tonumber(price)}
+            loadout[slot] = {["Tower"] = v.Name.."/"..enchant, ["Price"] = tonumber(price)}
             currentmaxes[v.Name] = 0
         end
     end
@@ -73,7 +81,7 @@ end
 
 local function upgradeloop(tower)
     if plr.leaderstats.Money.Value >= levelcosts[currentplacing["Tower"].Name][currentplacing["Level"]] then
-        if currentplacing["Level"] == maxlevels[currentplacing["Tower"].Name] then currentplacing["Tower"] = nil nextplace += 1 return end
+        if currentplacing["Level"] == maxlevels[currentplacing["Tower"].Name] then currentplacing["Tower"] = nil currentmaxes[tower] += 1 if currentmaxes[tower] == maxes[tower] then nextplace += 1 end return end
         local args = {
             [1] = currentplacing["Tower"]
         }
@@ -85,13 +93,11 @@ local function upgradeloop(tower)
 end
 
 local function place(tower)
-    print(tower)
     local args = {
         [1] = tower,
         [2] = CFrame.new(-14666.0352, 605.687012, -2270.27271, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     }
     game:GetService("ReplicatedStorage").Packages.Knit.Services.UnitService.RF.PlaceUnit:InvokeServer(unpack(args))
-    currentmaxes[tower] += 1
 end
 
 if game.PlaceId == 15939808257 then

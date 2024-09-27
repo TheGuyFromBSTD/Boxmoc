@@ -1,4 +1,9 @@
 wait(6)
+local VirtualUser = game:service('VirtualUser')
+game:service('Players').LocalPlayer.Idled:connect(function()
+    VirtualUser:CaptureController()
+    VirtualUser:ClickButton2(Vector2.new())
+end)
 local plr = game.Players.LocalPlayer
 plr.OnTeleport:Connect(function(State)
 	if queue_on_teleport then
@@ -83,6 +88,7 @@ for i,v in pairs(hotbarui:GetDescendants()) do
 end
 
 local function upgradeloop(tower)
+    print(levelcosts[currentplacing["Tower"].Name][currentplacing["Level"]])
     if plr.leaderstats.Money.Value >= levelcosts[currentplacing["Tower"].Name][currentplacing["Level"]] then
         if currentplacing["Level"] == maxlevels[currentplacing["Tower"].Name] then currentplacing["Tower"] = nil currentmaxes[tower] += 1 if currentmaxes[tower] == maxes[tower] then nextplace += 1 end return end
         local args = {

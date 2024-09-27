@@ -61,7 +61,7 @@ local levelcosts = {
 local enchantnames = {}
 for i,v in pairs(plr.PlayerGui.MainUI.Frames.Enchant.Main.Chances.ScrollingFrame:GetChildren()) do
     if v:IsA("Frame") then
-        enchantnames[v.Name] = v.Icon.Image
+        enchantnames[v.Icon.Image] = v.Name
     end
 end
 
@@ -73,7 +73,7 @@ for i,v in pairs(hotbarui:GetDescendants()) do
             local pricestring = v.Parent.Parent.Label.Text
             local enchant = v.Parent.Parent.Enchant.Enchant.Icon.Image
             local price = string.gsub(pricestring, "%D", "")
-            loadout[slot] = {["Tower"] = v.Name.."/"..enchant, ["Price"] = tonumber(price)}
+            loadout[slot] = {["Tower"] = v.Name.."/"..enchantnames[enchant], ["Price"] = tonumber(price)}
             currentmaxes[v.Name] = 0
         end
     end

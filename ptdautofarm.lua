@@ -73,7 +73,11 @@ for i,v in pairs(hotbarui:GetDescendants()) do
             local enchant = v.Parent.Parent.Enchant.Enchant.Icon.Image
             print(enchant)
             local price = string.gsub(pricestring, "%D", "")
-            loadout[slot] = {["Tower"] = v.Name.."/"..enchantnames[enchant], ["Price"] = tonumber(price)}
+            if enchant ~= "" then
+                loadout[slot] = {["Tower"] = v.Name.."/"..enchantnames[enchant], ["Price"] = tonumber(price)}
+            else
+                loadout[slot] = {["Tower"] = v.Name, ["Price"] = tonumber(price)}
+            end
             currentmaxes[v.Name] = 0
         end
     end

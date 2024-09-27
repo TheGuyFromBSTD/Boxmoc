@@ -1,9 +1,13 @@
 wait(6)
-queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGuyFromBSTD/Boxmoc/refs/heads/main/ptdautofarm.lua"))())
 local plr = game.Players.LocalPlayer
+plr.OnTeleport:Connect(function(State)
+	if queue_on_teleport then
+		queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/TheGuyFromBSTD/Boxmoc/refs/heads/main/ptdautofarm.lua'))()")
+	end
+end)
 local hotbarui = plr.PlayerGui.MainUI.Hotbar.Main.Units
 local loadout = {}
-local placespot = CFrame.new(-14658, 605, -2280 + Vector3.new(0,1.8,0)) * CFrame.Angles(-0, 0, -0)
+local placespot = CFrame.new(Vector3.new(-14658, 605, -2280) + Vector3.new(0,1.8,0)) * CFrame.Angles(-0, 0, -0)
 local nextplace = 1
 local currentplacing = {["Tower"] = nil,["Level"] = 1}
 local maxes = {

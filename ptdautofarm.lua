@@ -7,10 +7,9 @@ plr.OnTeleport:Connect(function(State)
 end)
 local hotbarui = plr.PlayerGui.MainUI.Hotbar.Main.Units
 local loadout = {}
-local placespot = Vector3.new(-14663.25390625, 605.6867065429688, -2268.96533203125)
 local nextplace = 1
 local currentplacing = {["Tower"] = nil,["Level"] = 1}
-local maxes = {
+--[[local maxes = {
     ["Fire Guardian"] = 2;
     ["Enderguy"] = 2;
     ["Odin"] = 3;
@@ -23,7 +22,7 @@ local maxlevels = {
     ["Odin"] = 5;
     ["Rosy Apollo"] = 7;
     ["Apollo"] = 7;
-}
+}]]
 local levelcosts = {
     ["Fire Guardian"] = {
         [1] = 475;

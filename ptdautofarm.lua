@@ -86,6 +86,7 @@ local function upgradeloop(tower)
 end
 
 local function place(tower)
+    print(tower)
     local args = {
         [1] = tower,
         [2] = CFrame.new(-14666.0352, 605.687012, -2270.27271, 1, 0, 0, 0, 1, 0, 0, 0, 1)

@@ -143,7 +143,7 @@ task.spawn(function()
     end
 end)
 game.workspace.Game.Map.PlacedUnits.ChildAdded:Connect(function(child)
-    currentplacing = {["Tower"] = child, ["Level"] = 0}
+    currentplacing = {["Tower"] = child, ["Level"] = 1}
     coroutine.wrap(upgradeloop)(child)
 end)
 game:GetService("ReplicatedStorage").Packages.Knit.Services.WaveService.RF.AutoSkip:InvokeServer()

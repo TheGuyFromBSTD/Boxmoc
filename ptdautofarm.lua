@@ -59,7 +59,7 @@ local levelcosts = {
     },
 }
 local enchantnames = {}
-for i,v in pairs(plr.PlayerGui.MainUI.Frames.Enchant.Chances.ScrollingFrame:GetChildren()) do
+for i,v in pairs(plr.PlayerGui.MainUI.Frames.Enchant.Main.Chances.ScrollingFrame:GetChildren()) do
     if v:IsA("Frame") then
         enchantnames[v.Name] = v.Icon.Image
     end

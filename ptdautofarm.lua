@@ -89,6 +89,7 @@ end
 
 local function upgradeloop(tower)
     print(levelcosts[currentplacing["Tower"].Name][currentplacing["Level"]])
+    print(currentplacing["Level"])
     if plr.leaderstats.Money.Value >= levelcosts[currentplacing["Tower"].Name][currentplacing["Level"]] then
         if currentplacing["Level"] == maxlevels[currentplacing["Tower"].Name] then currentplacing["Tower"] = nil currentmaxes[tower] += 1 if currentmaxes[tower] == maxes[tower] then nextplace += 1 end return end
         local args = {

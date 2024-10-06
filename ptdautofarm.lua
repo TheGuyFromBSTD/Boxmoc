@@ -1,13 +1,14 @@
-wait(6)
+wait(4)
 local VirtualUser = game:service('VirtualUser')
 game:service('Players').LocalPlayer.Idled:connect(function()
     VirtualUser:CaptureController()
     VirtualUser:ClickButton2(Vector2.new())
 end)
 local plr = game.Players.LocalPlayer
+
 plr.OnTeleport:Connect(function(State)
 	if queue_on_teleport then
-		queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGuyFromBSTD/Boxmoc/refs/heads/main/ptdautofarm.lua"))()]])
+		queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGuyFromBSTD/Boxmoc/refs/heads/main/ptdautofarm.lua"))())
 	end
 end)
 local hotbarui = plr.PlayerGui.MainUI.Hotbar.Main.Units
@@ -21,6 +22,7 @@ local maxes = {
     ["Odin"] = 3;
     ["Rosy Apollo"] = 3;
     ["Apollo"] = 3;
+    ["Necromancer"] = 2;
 }
 local maxlevels = {
     ["Fire Guardian"] = 7;
@@ -28,6 +30,7 @@ local maxlevels = {
     ["Odin"] = 5;
     ["Rosy Apollo"] = 7;
     ["Apollo"] = 7;
+    ["Necromancer"] = 6;
 }
 local levelcosts = {
     ["Fire Guardian"] = {
@@ -63,6 +66,14 @@ local levelcosts = {
         [6] = 2450;
         [7] = 2850;
     },
+    ["Necromancer"] = {
+        [1] = 425;
+        [2] = 750;
+        [3] = 1050;
+        [4] = 1400;
+        [5] = 1700;
+        [6] = 2000;
+    },
 }
 local enchantnames = {}
 for i,v in pairs(enchantmod.Enchants) do
@@ -88,8 +99,8 @@ for i,v in pairs(hotbarui:GetDescendants()) do
 end
 
 local function upgradeloop(tower)
-    if levelcosts[currentplacing["Tower"].Name][currentplacing["Level"] + 1] == nil then currentplacing["Tower"] = nil currentmaxes[tower] += 1 if currentmaxes[tower] == maxes[tower] then nextplace += 1 end return end
-    if plr.leaderstats.Money.Value >= levelcosts[currentplacing["Tower"].Name][currentplacing["Level"] + 1] then
+    if levelcosts[tower][currentplacing["Level"] + 1] == nil then currentplacing["Tower"] = nil currentmaxes[tower] += 1 if currentmaxes[tower] == maxes[tower] then nextplace += 1 end return end
+    if plr.leaderstats.Money.Value >= levelcosts[tower][currentplacing["Level"] + 1] then
         local args = {
             [1] = currentplacing["Tower"]
         }
@@ -103,7 +114,8 @@ end
 local function place(tower) 
     local args = {
         [1] = tower,
-        [2] = CFrame.new(-14666.0352, 605.687012, -2270.27271, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        --[2] = CFrame.new(-14666.0352, 605.687012, -2270.27271, 1, 0, 0, 0, 1, 0, 0, 0, 1) --underworld
+        [2] = CFrame.new(-13060.9092, 550.715759, 738.3125, 1, 0, 0, 0, 1, 0, 0, 0, 1) --kingdom
     }
     game:GetService("ReplicatedStorage").Packages.Knit.Services.UnitService.RF.PlaceUnit:InvokeServer(unpack(args))
 end
@@ -114,9 +126,13 @@ if game.PlaceId == 15939808257 then
         game:GetService("ReplicatedStorage").Packages.Knit.Services.GiftsService.RF.Claim:InvokeServer(i)
     end
     task.wait(1)
-    plr.Character:PivotTo(CFrame.new(-34.9111, 508.059, 193.926))
-    task.wait(0.7)
-    game:GetService("ReplicatedStorage").Packages.Knit.Services.ElevatorService.RF.Start:InvokeServer("Underworld-1")
+    local Elevators = game.workspace.Lobby.JoinPads.Elevators
+    local function joinelevator(name, number)
+        plr.Character:PivotTo(Elevators:FindFirstChild(name):FindFirstChild(number).CFrame)
+        task.wait(0.7)
+        game:GetService("ReplicatedStorage").Packages.Knit.Services.ElevatorService.RF.Start:InvokeServer(name.."-"..number)
+    end
+    joinelevator('Kingdom', "1")
 end
 task.spawn(function()
     while task.wait(0.1) do
@@ -152,5 +168,5 @@ game.workspace.Game.Map.PlacedUnits.ChildAdded:Connect(function(child)
 end)
 game:GetService("ReplicatedStorage").Packages.Knit.Services.WaveService.RF.AutoSkip:InvokeServer()
 game:GetService("ReplicatedStorage").Packages.Knit.Services.WaveService.RF.SpeedUp:InvokeServer()
-game:GetService("ReplicatedStorage").Packages.Knit.Services.VotingService.RF.Vote:InvokeServer("Hard")
+game:GetService("ReplicatedStorage").Packages.Knit.Services.VotingService.RF.Vote:InvokeServer("Nightmare")
 game:GetService("ReplicatedStorage").Packages.Knit.Services.VotingService.RF.Start:InvokeServer()

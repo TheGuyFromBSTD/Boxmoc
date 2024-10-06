@@ -7,8 +7,9 @@ game:service('Players').LocalPlayer.Idled:connect(function()
 end)
 local plr = game.Players.LocalPlayer
 
-queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGuyFromBSTD/Boxmoc/refs/heads/main/ptdautofarm.lua"))())
-
+plr.OnTeleport:Connect(function(State)
+    queue_on_teleport([[loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGuyFromBSTD/Boxmoc/refs/heads/main/ptdautofarm.lua"))()]])
+end)
 local hotbarui = plr.PlayerGui.MainUI.Hotbar.Main.Units
 local placeevent
 local upgradeevent

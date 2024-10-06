@@ -6,11 +6,11 @@ game:service('Players').LocalPlayer.Idled:connect(function()
 end)
 local plr = game.Players.LocalPlayer
 
---[[plr.OnTeleport:Connect(function(State)
+plr.OnTeleport:Connect(function(State)
 	if queue_on_teleport then
 		queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGuyFromBSTD/Boxmoc/refs/heads/main/ptdautofarm.lua"))())
 	end
-end)]]
+end)
 local hotbarui = plr.PlayerGui.MainUI.Hotbar.Main.Units
 local attackevent
 for i,v in pairs(game.ReplicatedStorage:GetDescendants()) do

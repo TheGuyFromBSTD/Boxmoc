@@ -6,12 +6,18 @@ game:service('Players').LocalPlayer.Idled:connect(function()
 end)
 local plr = game.Players.LocalPlayer
 
-plr.OnTeleport:Connect(function(State)
+--[[plr.OnTeleport:Connect(function(State)
 	if queue_on_teleport then
 		queue_on_teleport(loadstring(game:HttpGet("https://raw.githubusercontent.com/TheGuyFromBSTD/Boxmoc/refs/heads/main/ptdautofarm.lua"))())
 	end
-end)
+end)]]
 local hotbarui = plr.PlayerGui.MainUI.Hotbar.Main.Units
+local attackevent
+for i,v in pairs(game.ReplicatedStorage:GetDescendants()) do
+    if v.Name == "UnitAbilityRequest" then
+        attackevent = v
+    end
+end
 local loadout = {}
 local nextplace = 1
 local enchantmod = require(game.ReplicatedStorage.Modules.Data.Enchants)
@@ -111,11 +117,12 @@ local function upgradeloop(tower)
     upgradeloop(tower)
 end
 
-local function place(tower) 
+local function place(tower)
     local args = {
         [1] = tower,
         --[2] = CFrame.new(-14666.0352, 605.687012, -2270.27271, 1, 0, 0, 0, 1, 0, 0, 0, 1) --underworld
-        [2] = CFrame.new(-13060.9092, 550.715759, 738.3125, 1, 0, 0, 0, 1, 0, 0, 0, 1) --kingdom
+        --[2] = CFrame.new(-13060.9092, 550.715759, 738.3125, 1, 0, 0, 0, 1, 0, 0, 0, 1) --kingdom
+        [2] = CFrame.new(-13172.6426, 588.382812, 2923.04956, 1, 0, 0, 0, 1, 0, 0, 0, 1) -- halloween
     }
     game:GetService("ReplicatedStorage").Packages.Knit.Services.UnitService.RF.PlaceUnit:InvokeServer(unpack(args))
 end

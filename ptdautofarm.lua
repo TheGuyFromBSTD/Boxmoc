@@ -1,4 +1,5 @@
 wait(4)
+print("Digger trigger skibidi nigger")
 local VirtualUser = game:service('VirtualUser')
 game:service('Players').LocalPlayer.Idled:connect(function()
     VirtualUser:CaptureController()

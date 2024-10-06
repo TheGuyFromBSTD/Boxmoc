@@ -179,7 +179,7 @@ if game.PlaceId == 15939808257 then
         task.wait(0.7)
         elevatorstart:InvokeServer(name.."-"..number)
     end
-    joinelevator('Kingdom', "1")
+    joinelevator('Haunted Graveyard', "1")
 end
 task.spawn(function()
     while task.wait(0.1) do

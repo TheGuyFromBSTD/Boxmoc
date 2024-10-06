@@ -12,10 +12,50 @@ plr.OnTeleport:Connect(function(State)
 	end
 end)
 local hotbarui = plr.PlayerGui.MainUI.Hotbar.Main.Units
+local placeevent
+local upgradeevent
 local attackevent
+local elevatorleave
+local elevatorjoin
+local elevatorstart
+local autoskipevent
+local speedupevent
+local modevote
+local modestart
+local Giftclaimevent
 for i,v in pairs(game.ReplicatedStorage:GetDescendants()) do
     if v.Name == "UnitAbilityRequest" then
         attackevent = v
+    end
+    if v.Name == "Start" and v.Parent.Parent.Name == "ElevatorService" then
+        elevatorstart = v
+    end
+    if v.Name == "Join" and v.Parent.Parent.Name == "ElevatorService" then
+        elevatorjoin = v
+    end
+    if v.Name == "Leave" and v.Parent.Parent.Name == "ElevatorService" then
+        elevatorleave = v
+    end
+    if v.Name == "Start" and v.Parent.Parent.Name == "VotingService" then
+        modestart = v
+    end
+    if v.Name == "Vote" and v.Parent.Parent.Name == "VotingService" then
+        modevote = v
+    end
+    if v.Name == "Claim" and v.Parent.Parent.Name == "GiftsService" then
+        Giftclaimevent = v
+    end
+    if v.Name == "UpgradeUnit" then
+        upgradeevent = v
+    end
+    if v.Name == "PlaceUnit" then
+        placeevent = v
+    end
+    if v.Name == "AutoSkip" then
+        autoskipevent = v
+    end
+    if v.Name == "SpeedUp" then
+        speedupevent = v
     end
 end
 local loadout = {}
@@ -110,7 +150,7 @@ local function upgradeloop(tower)
         local args = {
             [1] = currentplacing["Tower"]
         }
-        game:GetService("ReplicatedStorage").Packages.Knit.Services.UnitService.RF.UpgradeUnit:InvokeServer(unpack(args))
+        upgradeevent:InvokeServer(unpack(args))
         currentplacing["Level"] += 1
     end
     task.wait(1)
@@ -124,20 +164,20 @@ local function place(tower)
         --[2] = CFrame.new(-13060.9092, 550.715759, 738.3125, 1, 0, 0, 0, 1, 0, 0, 0, 1) --kingdom
         [2] = CFrame.new(-13172.6426, 588.382812, 2923.04956, 1, 0, 0, 0, 1, 0, 0, 0, 1) -- halloween
     }
-    game:GetService("ReplicatedStorage").Packages.Knit.Services.UnitService.RF.PlaceUnit:InvokeServer(unpack(args))
+    placeevent:InvokeServer(unpack(args))
 end
 
 if game.PlaceId == 15939808257 then
     task.wait(5)
     for i=1,9 do
-        game:GetService("ReplicatedStorage").Packages.Knit.Services.GiftsService.RF.Claim:InvokeServer(i)
+        Giftclaimevent:InvokeServer(i)
     end
     task.wait(1)
     local Elevators = game.workspace.Lobby.JoinPads.Elevators
     local function joinelevator(name, number)
         plr.Character:PivotTo(Elevators:FindFirstChild(name):FindFirstChild(number).CFrame)
         task.wait(0.7)
-        game:GetService("ReplicatedStorage").Packages.Knit.Services.ElevatorService.RF.Start:InvokeServer(name.."-"..number)
+        elevatorstart:InvokeServer(name.."-"..number)
     end
     joinelevator('Kingdom', "1")
 end
@@ -150,22 +190,22 @@ task.spawn(function()
                     [2] = os.time(),
                     [3] = workspace.Game.Map.Enemies:GetChildren()[1].Name
                 }
-                game:GetService("ReplicatedStorage").Packages.Knit.Services.WaveService.RE.UnitAbilityRequest:FireServer(unpack(args))
+                attackevent:FireServer(unpack(args))
             end 
         end
         if plr.leaderstats.Money.Value >= loadout[tostring(nextplace)].Price and currentplacing["Tower"] == nil then
             place(loadout[tostring(nextplace)].Tower)
         end
         if plr.PlayerGui.MainUI.Frames.Results.Visible == true then
-            game:GetService("ReplicatedStorage").Packages.Knit.Services.ElevatorService.RF.Leave:InvokeServer()
+            elevatorleave:InvokeServer()
             task.wait(0.1)
             local A_1 = "Lobby-1"
             local A_2 = "Lobby"
             local A_3 = "Lobby"
-            game:GetService("ReplicatedStorage").Packages.Knit.Services.ElevatorService.RF.Join:InvokeServer(A_1, A_2, A_3)
+            elevatorjoin:InvokeServer(A_1, A_2, A_3)
             task.wait(0.2)
             local A_1 = "Lobby-1"
-            game:GetService("ReplicatedStorage").Packages.Knit.Services.ElevatorService.RF.Start:InvokeServer(A_1)
+            elevatorstart:InvokeServer(A_1)
         end
     end
 end)
@@ -173,7 +213,7 @@ game.workspace.Game.Map.PlacedUnits.ChildAdded:Connect(function(child)
     currentplacing = {["Tower"] = child, ["Level"] = 1}
     coroutine.wrap(upgradeloop)(child.Name)
 end)
-game:GetService("ReplicatedStorage").Packages.Knit.Services.WaveService.RF.AutoSkip:InvokeServer()
-game:GetService("ReplicatedStorage").Packages.Knit.Services.WaveService.RF.SpeedUp:InvokeServer()
-game:GetService("ReplicatedStorage").Packages.Knit.Services.VotingService.RF.Vote:InvokeServer("Nightmare")
-game:GetService("ReplicatedStorage").Packages.Knit.Services.VotingService.RF.Start:InvokeServer()
+autoskipevent:InvokeServer()
+speedupevent:InvokeServer()
+modevote:InvokeServer("Nightmare")
+modestart:InvokeServer()
